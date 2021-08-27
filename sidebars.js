@@ -35,7 +35,20 @@ module.exports = {
                         ]
                 },
 		{type: 'category', label: 'Benchmarking', items: ["benchmarking"]},
-		{type: 'category', label: 'Server Infrastructure', items: ["active-rep", "multi-master", "replication", "cluster-spec", "cluster-man", "cluster-create", "cluster-tutorial", "sentinel", "sentinel-clients"]},
+		{type: 'category', label: 'Server Infrastructure', items: ["comparison-of-a-c-s","replication", 
+			{type: 'category', label: 'Active Replication & Multi-Master', collapsed: false, items:  
+				["armm-introduction",
+				"armm-implementation-details",
+				"armm-recommended-network-topology",
+				"armm-limitations",
+				"armm-configurations-basic-setup",
+				"armm-configurations-read-only-replica",
+				"armm-configurations-advanced"
+				]},
+			{type: 'category', label : 'Clustering', collapsed: false, items: 
+				["cluster-spec", "cluster-man", "cluster-create", "cluster-tutorial"]},
+			{type: 'category', label : 'Sentinel', collapsed: false, items: 
+				["sentinel", "sentinel-clients"]}]},
 		{type: 'category', label: 'Data Types & Commands', items: ["commands", "pubsub", "transactions", "data-types-intro", "data-types", "indexes", "signals", "notifications", "pipelining", "streams-intro", "partitioning", "mass-insert"]},
 		{type: 'category', label: 'Configuration', collapsed: true, items: ["persistence", "lru-cache", "config-file"]},
 		{type: 'category', label: 'Docker', items: [
