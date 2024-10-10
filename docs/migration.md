@@ -11,6 +11,8 @@ KeyDB is compatible with all Redis clients as listed [here](https://redis.io/cli
 
 This document will discuss migration from Redis to KeyDB and vice versa. In each scenario the methodology is similar. We will look at both an offline migration and a live migration for each scenario.
 
+**Note: RDB Format 10 is not supported and therefore this guide does not apply to migrations from Redis 7.0 and above.**
+
 ## Create a Snapshot
 
 Using [SAVE](https://docs.keydb.dev/docs/commands/#save) or [BGSAVE](https://docs.keydb.dev/docs/commands/#bgsave) you can create an RDB backup file of the database. If you are saving in production where you don't want any downtime it is recommended to use BGSAVE to prevent blocking clients as SAVE performs synchronously.
